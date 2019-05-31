@@ -8,13 +8,16 @@ Projekt składa się z 2 folderów oraz pliku uruchomieniowego.
 ```
 .
 ├── src                         #(folder zawierający pliki źródłowe)
-    ├── ./fftw                  #(plik uruchomieniowy programu)
+    ├── fftw3.F90               #(wrapper tworzący modul linkujący bibliotekę FFTW)
+    ├── fftw.F90                #(kod źródłowy pierwszej części zadania (prezentacja działania fft))             
+    ├── fftw_filter.F90         #(kod źródłowy drugiej części zadania (odszumianie))
 ├── res                         #(folder zawierjący wyniki działania)
 ```
 
 ## Sposób użycia
 ```
-./fftw                          #(bezpośrednie uruchomienie)
+./fftw                          #(bezpośrednie uruchomienie pierwszej części zadania)
+./fftw_filter                   #(bezpośrednie uruchomienie drugiej części zadania)
 make test                       #(uruchmienie za pomocą make)
 ```
 
