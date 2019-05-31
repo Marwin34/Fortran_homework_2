@@ -6,7 +6,7 @@ OUT=fftw
 FILTER_OUT=fftw_filter
 LIB=-lfftw3
 
-build: $(SRC)
+build: $(SRC) $(MOD_SRC) $(FILTER_SRC)
 	$(IFORT) -c $(MOD_SRC)
 	$(IFORT) $(SRC) -o $(OUT) $(LIB)
 	$(IFORT) $(FILTER_SRC) -o $(FILTER_OUT) $(LIB)
