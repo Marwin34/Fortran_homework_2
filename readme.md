@@ -21,16 +21,10 @@ make test                       #(uruchmienie za pomocą make)
 Uruchomienie programu spowoduje wygenerowanie plików wynikowych które zapisane zostaną w folderze /res. Na podstawie tych plików możliwe jest narysowanie wykresów za pomocą dołączonych w folderze /res plików obsługujących narzędzie gnuplot.
 
 ## Wyniki działania
-<center>
 
-<object data="https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
-
+[embed]https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.pdf[/embed]
+    
 _Wykres przedstawiający wynik działania funkcji fftw_execute_dft_r2c._
-</center>
 
 ___
 
