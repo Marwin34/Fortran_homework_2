@@ -1,0 +1,4 @@
+src/fftw
+src/fftw3.mod
+src/fftw3.o
+src/fftw_filter
