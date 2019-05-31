@@ -21,11 +21,28 @@ make test                       #(uruchmienie za pomocą make)
 Uruchomienie programu spowoduje wygenerowanie plików wynikowych które zapisane zostaną w folderze /res. Na podstawie tych plików możliwe jest narysowanie wykresów za pomocą dołączonych w folderze /res plików obsługujących narzędzie gnuplot.
 
 ## Wyniki działania
+Pierwszym podpunktem zadania było przeporwadzenie transformaty na sygnale wygenerowany zgosnie z zadaną funkcją i obserwacja wyników. Na wykresie zauważyć można charaakterystyczne słupki określające maxymalną amplitudę przypadającą na daną częstotliwość, zadana funkcja składała się z dwóch składników dlatego też obserwujemy dwa słupki. Zadana funckja: x(t) = sin(2 * pi * t * 200) + 2 * sin(2 * pi * t * 400) 
 
-[embed]https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.pdf[/embed]
+![alt text](https://github.com/Marwin34/Fortran_homework_2/blob/master/res/fft_plot.png "Wykres tranformaty dla zadanej funkcji.")
+
+Kolejnym etapem zadania było odszumienie sygnału poswtałego zgodnie z funkcją cosinus.
+
+![alt text](https://github.com/Marwin34/Fortran_homework_2/blob/master/res/noised_cos_plot.png "Wykres zaszumionego sygnału.")
+
+Otrzymany zaszumiany sygna został poddany tranformacie fouriera.
+
+![alt text](https://github.com/Marwin34/Fortran_homework_2/blob/master/res/noised_cos_fft_plot.png "Wykres tranformaty zszumionego sygnału.")
+
+Następnie usunięto wartości dla których amplituda była mniejsza od 50.
+
+![alt text](https://github.com/Marwin34/Fortran_homework_2/blob/master/res/filtered_cos_fft_plot.png "Wykres przefiltrowanej tranformaty.")
+
+Ostatnim krokiem w zdaniu było przeprowadzenie odwrotnej tranformaty na odfiltrowanym wybiku.
+
+![alt text](https://github.com/Marwin34/Fortran_homework_2/blob/master/res/filtered_cos_plot.png "Wykres odszumiony sygnał.")
+
+Na końcu otrzymano odszumiony sygnał który wygląda idealnie jak wykres funkcji cosinus.
     
-_Wykres przedstawiający wynik działania funkcji fftw_execute_dft_r2c._
-
 ___
 
 Przykładowe wykresy stworzone narzędziem gnuplot stosując odpowiednie pliki sterujące.
@@ -40,3 +57,4 @@ res
 ```
 
 ## Wnioski
+FFT jest bardzo przydantym narzędziem i ma wiele zastosowań (jak chociażby przedstawione odszumianie sygnału). 
