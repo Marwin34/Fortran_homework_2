@@ -28,7 +28,7 @@ program main
 
   call fftw_execute_dft_r2c(plan_f, data_in, data_out)
 
-  open(19, file='../res/fft_out', status='unknown')
+  open(19, file='res/fft_out', status='unknown')
 
   do i=1,size(data_out)
       val = abs(data_out(i))

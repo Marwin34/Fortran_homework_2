@@ -29,7 +29,7 @@ program main
   plan_noise_f = fftw_plan_dft_r2c_1d(size(noised_data_in), noised_data_in, noised_data_out, FFTW_ESTIMATE+FFTW_UNALIGNED)
   plan_noise_b = fftw_plan_dft_c2r_1d(size(noised_data_in), noised_data_out, noised_data_in, FFTW_ESTIMATE+FFTW_UNALIGNED)
 
-  open(19, file='../res/noised_cos', status='unknown')
+  open(19, file='res/noised_cos', status='unknown')
 
   t = 0.0
   do i=1,size(noised_data_in)
@@ -42,7 +42,7 @@ program main
 
   call fftw_execute_dft_r2c(plan_noise_f, noised_data_in, noised_data_out)
 
-  open(19, file='../res/noised_cos_fft', status='unknown')
+  open(19, file='res/noised_cos_fft', status='unknown')
 
   do i=1,size(noised_data_out)
       val = abs(noised_data_out(i))
@@ -51,7 +51,7 @@ program main
   end do
   close(19)
 
-  open(19, file='../res/filtered_cos_fft', status='unknown')
+  open(19, file='res/filtered_cos_fft', status='unknown')
 
   do i=1,size(noised_data_out)
       if(abs(noised_data_out(i)) /= abs(noised_data_out(i))) noised_data_out(i) = (0.0, 0.0)
@@ -65,7 +65,7 @@ program main
 
   call fftw_execute_dft_c2r(plan_noise_b, noised_data_out, noised_data_in)
 
-  open(19, file='../res/filtered_cos', status='unknown')
+  open(19, file='res/filtered_cos', status='unknown')
 
   t = 0.0
   do i=1,size(noised_data_in)
